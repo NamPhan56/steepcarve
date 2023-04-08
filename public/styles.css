@@ -23,3 +23,11 @@ main {
 p {
     line-height: 1.5;
 }
+
+pre{
+    background-color: #f4f4f4; border: 1px solid #ddd; padding: 10px;
+}
+
+code{
+    font-family: monospace;
+}
