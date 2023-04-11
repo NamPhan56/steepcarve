@@ -8,6 +8,7 @@ const cookieParser = require('cookie-parser')
 const PORT = process.env.POR || 3500
 
 app.use(logger)
+
 //allow json receving and parsing
 app.use(express.json())
 
@@ -18,6 +19,7 @@ app.use('/', express.static(path.join(__dirname, '/public')))
 app.use('/', require('./routes/root'))
 
 app.all('*',(req,res) => {
+    //responds with a 404 status
     res.status(404)
     if(req.accepts('html')){
         res.sendFile(path.join(__dirname, '/views', '404.html'))

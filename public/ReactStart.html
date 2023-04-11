@@ -17,14 +17,18 @@
                 - These are the basic steps for starting a React Web App including Github Repository setup
 
                 ---
-                
-                ## Setup Local Directory
+            </md-block>
+
+            <md-block>
+                # Setup Local Directory
                 1. Locate a directory to setup your app
                 2. Create your app folder, use the foldername: "reactapp" for this example
                 3. Open VS Code and navigate to your new reactapp directory
                 4. Initiate node with `npm init`
-                
-                ## Setup Github Repository
+            </md-block>
+
+            <md-block>
+                # Setup Github Repository
                 1. Install [Github Deskop](https://desktop.github.com/) and [Git](https://git-scm.com/downloads)
                     - Note: Github Desktop is optional, but makes pushing easier
                 2. In VS Code, navigate into "reactapp" folder
@@ -33,7 +37,19 @@
                 5. Open Github Desktop > "File" > "Add Local Repository" > and type in the directory of "reactapp"
                 6. Use Github Desktop to push to your repository.
                     - Note: this assumes you are already signed in using your github account
-
+                7. Setup tracking for your main branch:
+                    1. `git add .`
+                    2. `git commit -m "some comment"
+                    3. `git push -u origin main`
+                8. Create new branch and checkout
+                    1. `git checkout -b "branch name"
+                    2. `git add .`
+                    3. `git commit -m "some comment about current branch"`
+                    4. `git push -u origin branchname`
+                ---
+            </md-block>
+            
+            <md-block>
                 ## Install Express
                 1. In VS Code and in the "reactapp" directory, use command: `npm i express`
 
@@ -91,6 +107,7 @@
                 module.exports = router
                 ```
             </md-block>
+
         </main>
     </body>
 </html>
