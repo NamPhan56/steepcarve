@@ -3,12 +3,17 @@ const app = express()
 const path = require('path')
 const { logger } = require('./middleware/logger')
 const errorHandler = require('./middleware/errorHandler')
+
 const cookieParser = require('cookie-parser')
 
-const PORT = process.env.POR || 3500
+const cors = require('cors')
+const corsOptions = require('./config/corsOptions')
+
+const PORT = process.env.POR || 4000
 
 app.use(logger)
 
+app.use(cors(corsOptions))
 //allow json receving and parsing
 app.use(express.json())
 
