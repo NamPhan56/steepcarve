@@ -20,12 +20,24 @@
 
             ## Summary
                 This is used to reset a branch to its initial state
+                Nice tutorial: https://devconnected.com/how-to-git-reset-to-head/
         
             ## Commands
 
+            
+      
+
+
             ```
             git reset --hard HEAD~&lt;number-of-commits&gt;
+            
+            git reset --hard HEAD~\<number-of-commits\>
 
+            //reset back to branche's HEAD
+            git reset --hard HEAD^
+
+            //undo a hard reset
+            git reset --hard HEAD@{1}
             ```
 
             ## Usage
