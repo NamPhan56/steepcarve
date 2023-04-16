@@ -5,7 +5,7 @@ const path = require('path')
 //Get requests
 //only match if the requested route is only a slash
 router.get('^/$|/index(.html)?', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'views', 'index.html'))
+    res.sendFile(path.join(__dirname, '..', 'client','public', 'index.html'))
     //look in the views folder for the "index.html" file
 })
 
