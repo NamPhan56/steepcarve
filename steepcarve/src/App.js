@@ -1,16 +1,34 @@
-import { Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
+
 import './App.css';
 import Layout from './components/Layout'
-import Public from './components/Public'
-
+import Home from './components/Home'
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index elmeent={<Public /> } />
-      </Route>
-    </Routes>
+    <Router>
+
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/projects">Projects</Link>
+          </li>
+          <li>
+            <Link to="/repository">Repository</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/repoisitory" element={Repository />}>
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 

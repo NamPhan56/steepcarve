@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 
-const Public = () => {
+const Home = () => {
         const content = (
-            <section className="public">
+            <section className="home">
                 <header><h1>Welcome to Steep Carve!</h1></header>
 
                 <main>
@@ -12,4 +12,4 @@ const Public = () => {
         return content
 }
 
-export default Public
+export default Home
