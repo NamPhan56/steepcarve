@@ -4,9 +4,12 @@ import './App.css';
 import Layout from './components/Layout'
 import Home from './components/Home'
 import ProjectHome from './components/features/projects/ProjectHome'
-import RepositoryHome from './components/features/repository/RepositoryHome'
 import SnowboardResortsHome from './components/features/projects/snowboardResortsApp/SnowboardResortsHome'
 
+import Repository from './components/features/repository/Repository'
+import WebDevelopment from './components/features/repository/webdevelopment/WebDevelopment'
+import MERNStack from './components/features/repository/webdevelopment/mernstack/MERNStack'
+import MENStack from './components/features/repository/webdevelopment/menstack/MENStack.md'
 
 function App() {
   return (
@@ -29,8 +32,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<ProjectHome />} />
-        <Route path="/repository" element={<RepositoryHome />} />
-        <Route path="/projects/snowboardResortsApp" element={<SnowboardResortsHome />} />
+          <Route path="/projects/snowboardResortsApp" element={<SnowboardResortsHome />} />
+        <Route path="/repository" element={<Repository />} />
+          <Route path="/repository/webdevelopment" element={<WebDevelopment />} />
+            <Route path="/repository/webdevelopment/mernstack" element={<MERNStack />} />
+              <Route path="/repository/webdevelopment/menstack" element={<MENStack />} />   
       </Routes>
     </Router>
   );
