@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Getting Started with React</title>
+        <title>Getting Started with Nodejs, MongoDB, and Express</title>
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <script type="module" src="https://md-block.verou.me/md-block.js"></script>
         <!-- "< = &lt;" and "> = &gt;" -->
@@ -24,74 +24,14 @@
             </md-block>
 
             <md-block>
-                # Setup React App Structure
-
-                1. Navigate to a directory you want to host your react app
-                2. Use this command to install and setup a react app struture:
+                # Setup Local Directory
+                1. Locate a directory to setup your app
+                2. Create your app folder, use the foldername: "reactapp" for this example
+                3. Open VS Code and navigate to your new reactapp directory
+                4. Initiate node with:
                     - ```
-                        npx create-react-app reactapp
+                        npm init
                         ```
-                     - Note: you cannot use capitals in your name
-                    - In "src" folder, create a "components" folder
-                ---
-            </md-block>
-
-            <md-block>
-                # [Install React Router Dom](https://www.npmjs.com/package/react-router-dom)
-
-                ## Summary
-                    The react-router-dom package contains bindings for using React Router in web applications.
-                    Please see the Getting Started guide for more information on how to get started with React Router.
-
-                ## Steps
-                1. Use this command to install the package
-                    - ```
-                        npm i react-router-dom
-                        ```
-                2. Add this code to "src/index.js"
-                    - ```
-                        import { BrowserRouter, Routes, Route} from 'react-router-dom';
-
-                        &lt;React.StrictMode&gt;
-                            &lt;BrowserRouter&gt;
-                                &lt;Routes&gt;
-                                    &lt;Route path="/*" element={&lt;App /&gt;} /&gt;
-                                &lt;/Routes&gt;
-                            &lt;/BrowserRouter&gt;
-                        &lt;/React.StrictMode&gt;
-                        ```
-                    - This will allow nested routes
-                3. Adjust code in "App.js"
-                    - ```
-                        import { Routes, Route } from 'react-router-dom'
-
-                        import './App.css';
-                        import Layout from './components/Layout'
-                        
-                        function App() {
-                        return (
-                            &lt;Routes&gt;
-                            &lt;Route path="/" element={&lt;Layout /&gt;}&gt;
-                            &lt;/Route&gt;
-                            &lt;/Routes&gt;
-                        );
-                        }
-                        
-                        export default App;
-                        ```
-                4. In "src/components" create a "Layout.js" file and fill with
-                    - ```
-                        import  { Outlet } from 'react-router-dom'
-
-                        const Layout = () =&gt; {
-                            return (
-                                &lt;Outlet /&gt;
-                            )
-                        }
-                        
-                        export default Layout
-                        ```
-                    - This renders the children of the Outlet component
             </md-block>
 
             <md-block>
