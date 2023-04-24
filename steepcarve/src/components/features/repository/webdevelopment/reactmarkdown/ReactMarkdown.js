@@ -12,8 +12,22 @@ const reactmarkdown = () => {
   # Steps for Setting up Markdown for React
 
   ## About
-  - These are the basic steps for starting a React Web App including Github Repository setup
+  - These are the basic steps for setting up Markdown and also rendering code snippets
   ---
+
+  ## Install Packages
+  1. Install the following packages
+        -   ~~~js
+            npm i react-markdown react-syntax-highlighter
+            ~~~
+  2. In the component, import these:
+        -   ~~~js
+            import ReactMarkdown from 'react-markdown';
+
+            import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+            import { vscDarkPlus as syntaxStyle } from 'react-syntax-highlighter/dist/esm/styles/prism';
+            ~~~
+
   `
 )
 
