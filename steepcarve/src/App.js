@@ -10,7 +10,7 @@ import Repository from './components/features/repository/Repository'
 import WebDevelopment from './components/features/repository/webdevelopment/WebDevelopment'
 import MERNStack from './components/features/repository/webdevelopment/mernstack/MERNStack'
 import MENStack from './components/features/repository/webdevelopment/menstack/MENStack'
-import ReactMarkdown from '/repository/webdevelopment/reactmarkdown/ReactMarkdown'
+import ReactMarkdown from './components/features/repository/webdevelopment/reactmarkdown/ReactMarkdown'
 
 function App() {
   return (
