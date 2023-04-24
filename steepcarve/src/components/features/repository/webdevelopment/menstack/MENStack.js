@@ -328,8 +328,6 @@ const menstack = () => {
               ~~~
   `
 )
-
-  
   return(
     <div>
       <ReactMarkdown
