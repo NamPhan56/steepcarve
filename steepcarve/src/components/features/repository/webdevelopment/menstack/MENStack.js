@@ -1,7 +1,6 @@
 
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import ReactDOM from 'react-dom';
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus as syntaxStyle } from 'react-syntax-highlighter/dist/esm/styles/prism';
