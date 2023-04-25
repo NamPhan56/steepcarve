@@ -74,8 +74,6 @@ const markdown = (
         ~~~
 `
 )
-
-  
   return(
     <div>
       <ReactMarkdown
