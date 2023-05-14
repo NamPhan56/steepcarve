@@ -11,7 +11,7 @@ This app has or will have the following main features:
 - [P] = In Progress 
 - [O] = Planned
 
-&nbsp;
+<br>
 
 - [O] Portfolio
 - [X] Projects Page
