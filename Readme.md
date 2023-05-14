@@ -1,11 +1,12 @@
 # This is the Steep Carve Website
 
 ## Description
-This website will me the main anchor app to all of my apps.
-All apps will currently be created with the mernstack.
+This website will me the main anchor app to all of my apps. <br>
+All apps will currently be created with the mernstack. <br>
+This website will currently be hosted by AWS. <br>
+The Domain name is https://steepcarve.net/ <br>
 
 ## Features
-
 This app has or will have the following main features:
 - [x] = Completed
 - [P] = In Progress 
@@ -15,15 +16,11 @@ This app has or will have the following main features:
 
 - [O] Portfolio
 - [X] Projects Page
- - [O] Snowboard Resorts App
- - [O] Poke Search App
 - [O] Login for more personal content
 - [x] Repository
  - [x] Web Developement Page
+  - [P] MERN Stack
  - [O] Salesforce Page
-  - [O] Administrator
-  - [O] Developer
-
 
 ## Usage
 In the project directory, you can run:
@@ -44,5 +41,13 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ## Road Map
 
+### Projects
+ - [O] Snowboard Resorts App
+ - [ ] Poke Search App
 
+### Repository
+
+#### Salesforce
+ - [ ] Administrator
+ - [ ] Developer
 
