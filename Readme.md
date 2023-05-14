@@ -5,10 +5,13 @@ This website will me the main anchor app to all of my apps.
 All apps will currently be created with the mernstack.
 
 ### Features
-This app has the features
+
+This app has or will have the following main features:
 - [x] = Completed
 - [P] = In Progress 
 - [O] = Planned
+
+&nbsp;
 
 - [O] Portfolio
 - [X] Projects Page
