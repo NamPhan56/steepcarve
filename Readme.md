@@ -6,9 +6,9 @@ All apps will currently be created with the mernstack.
 
 ### Features
 This app has the features
-[x] = Completed
-[P] = In Progress 
-[O] = Planned
+- [x] = Completed
+- [P] = In Progress 
+- [O] = Planned
 
 - [O] Portfolio
 - [X] Projects Page
