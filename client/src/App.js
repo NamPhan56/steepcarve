@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
 
 import './App.css';
-import Layout from './components/Layout'
 import Home from './components/Home'
 import ProjectHome from './components/features/projects/ProjectHome'
 import SnowboardResortsHome from './components/features/projects/snowboardResortsApp/SnowboardResortsHome'
