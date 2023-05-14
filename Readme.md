@@ -6,15 +6,20 @@ All apps will currently be created with the mernstack.
 
 ### Features
 This app has the features
+[x] = Completed
+[P] = In Progress 
+[O] = Planned
 
-- [ ] Portfolio
-- [ ]
-- [ ] Login for more personal content
+- [O] Portfolio
+- [X] Projects Page
+ - [O] Snowboard Resorts App
+ - [O] Poke Search App
+- [O] Login for more personal content
 - [x] Repository
- - [ ] Web Developement
- - [ ] Salesforce
-  - [ ] Administrator
-  - [ ] Developer
+ - [x] Web Developement Page
+ - [O] Salesforce Page
+  - [O] Administrator
+  - [O] Developer
 
 
 ## Usage
