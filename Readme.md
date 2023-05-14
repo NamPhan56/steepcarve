@@ -4,7 +4,7 @@
 This website will me the main anchor app to all of my apps.
 All apps will currently be created with the mernstack.
 
-### Features
+## Features
 
 This app has or will have the following main features:
 - [x] = Completed
