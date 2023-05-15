@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
 
 import './App.css';
 import Home from './components/Home'
+import PortfolioHome from './components/features/portfolio/PortfolioHome'
 import ProjectHome from './components/features/projects/ProjectHome'
 import SnowboardResortsHome from './components/features/projects/snowboardResortsApp/SnowboardResortsHome'
 
@@ -17,19 +18,23 @@ function App() {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/"><button>Home</button></Link>
           </li>
           <li>
-            <Link to="/projects">Projects</Link>
+            <Link to="/portfolio"><button>Portfolio</button></Link>
           </li>
           <li>
-            <Link to="/repository">Repository</Link>
+            <Link to="/projects"><button>Projects</button></Link>
+          </li>
+          <li>
+            <Link to="/repository"><button>Repository</button></Link>
           </li>
         </ul>
       </nav>
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/portfolio" element={<PortfolioHome />} />
         <Route path="/projects" element={<ProjectHome />} />
           <Route path="/projects/snowboardResortsApp" element={<SnowboardResortsHome />} />
         <Route path="/repository" element={<Repository />} />
