@@ -1,10 +1,10 @@
+import '../../Features.css';
 import { Link } from 'react-router-dom';
-
 
 const WebDevelopment = () => {
     const content = (
         <>
-            <header><h1>Web Develpoment Repository</h1></header>
+            <header>Web Develpoment Repository</header>
 
             <Link to ="/repository/webdevelopment/menstack">
                 <button>MEN Stack</button>

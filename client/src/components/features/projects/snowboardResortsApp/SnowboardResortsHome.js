@@ -1,4 +1,4 @@
-
+import '../Projects.css';
 const SnowboardResortsHome = () => {
     
     const content = (
