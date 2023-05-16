@@ -1,4 +1,6 @@
+import '../Features.css';
 import './Projects.css';
+
 import { Link } from 'react-router-dom';
 
 const ProjectHome = () => {

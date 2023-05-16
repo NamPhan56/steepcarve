@@ -1,6 +1,8 @@
-
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
+
+import '../../../Features.css';
+import '../../Repository.css';
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus as syntaxStyle } from 'react-syntax-highlighter/dist/esm/styles/prism';
@@ -328,7 +330,7 @@ const menstack = () => {
               ~~~
   `
 )
-  return(
+return(
     <div>
       <ReactMarkdown
         children={markdown}

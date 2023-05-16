@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import '../Features.css';
 import './PortfolioHome.css';
 
 const PortfolioHome = () => {

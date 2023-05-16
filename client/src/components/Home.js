@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom'
+import '../index.css'
 
 const Home = () => {
         const content = (
-            <section className="home">
+            <section>
                 <header><h1>Welcome to Steep Carve!</h1></header>
 
                 <main>

@@ -1,4 +1,6 @@
 import '../../Features.css';
+import '../Repository.css';
+
 const home = () => {
     const content = (
         <>

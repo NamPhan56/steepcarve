@@ -1,3 +1,4 @@
+import '../../Features.css';
 import '../Projects.css';
 const SnowboardResortsHome = () => {
     
