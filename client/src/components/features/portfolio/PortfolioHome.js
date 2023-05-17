@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import '../Features.css';
-import './PortfolioHome.css';
+import './portfoliohome.css';
 
 const PortfolioHome = () => {
     

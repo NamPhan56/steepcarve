@@ -1,5 +1,4 @@
-import '../../Features.css';
-import '../Repository.css';
+import '../repository.css';
 
 const home = () => {
     const content = (

@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import '../Features.css';
-import './Repository.css';
+import './repository.css';
 
 const Repository = () => {
     const content = (

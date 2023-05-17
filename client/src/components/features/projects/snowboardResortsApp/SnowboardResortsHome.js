@@ -1,5 +1,5 @@
-import '../../Features.css';
-import '../Projects.css';
+import '../projects.css';
+
 const SnowboardResortsHome = () => {
     
     const content = (
