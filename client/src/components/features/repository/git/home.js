@@ -1,8 +1,9 @@
+import '../repository.css';
 
 const home = () => {
     const content = (
         <>
-            <header><h1>Welcome to the Git Repository</h1></header>
+            <header>Welcome to the Git Repository</header>
         </>
     )
 

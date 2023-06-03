@@ -1,13 +1,14 @@
-import { Link } from 'react-router-dom'
+import styles from './home.css'
 
+import classNames from 'classnames';
 const Home = () => {
         const content = (
-            <section className="home">
-                <header><h1>Welcome to Steep Carve!</h1></header>
+            <div>
+                <header>Welcome to Steep Carve!</header>
 
                 <main>
                 </main>
-            </section>
+            </div>
         )
         return content
 }
