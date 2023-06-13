@@ -73,93 +73,70 @@ const CalculatorHarness = () => {
     //     var inputValue = inputField.value;
     //     console.log(inputValue);
 
-const [displayValue, setDisplayValue] = useState('0');
-  const [firstOperand, setFirstOperand] = useState(null);
-  const [operator, setOperator] = useState(null);
-  const [waitingForSecondOperand, setWaitingForSecondOperand] = useState(false);
+  const [displayValue, setDisplayValue] = useState('');
+  const [calculation, setCalculation] = useState('');
+  const [error, setError] = useState('');
 
   const handleDigitClick = (digit) => {
-    if (displayValue === '0' || waitingForSecondOperand) {
-      setDisplayValue(digit);
-      setWaitingForSecondOperand(false);
-    } else {
-      setDisplayValue((prevDisplay) => prevDisplay + digit);
-    }
+    setDisplayValue((prevDisplay) => prevDisplay + digit);
+    setError('');
   };
 
   const handleOperatorClick = (operatorValue) => {
-    if (firstOperand === null) {
-      setFirstOperand(parseFloat(displayValue));
-      setOperator(operatorValue);
-      setWaitingForSecondOperand(true);
-    } else {
-      calculateResult();
-      setOperator(operatorValue);
-      setWaitingForSecondOperand(true);
+    if (displayValue !== '') {
+      setCalculation((prevCalculation) => prevCalculation + displayValue + operatorValue);
+      setDisplayValue('');
+      setError('');
     }
   };
 
   const calculateResult = () => {
-    const secondOperand = parseFloat(displayValue);
-    let result = 0;
-
-    switch (operator) {
-      case '+':
-        result = firstOperand + secondOperand;
-        break;
-      case '-':
-        result = firstOperand - secondOperand;
-        break;
-      case '*':
-        result = firstOperand * secondOperand;
-        break;
-      case '/':
-        result = firstOperand / secondOperand;
-        break;
-      default:
-        return;
-    }
-
-    setDisplayValue(result.toString());
-    setFirstOperand(result);
+    try {
+        const result = eval(calculation + displayValue);
+        setDisplayValue(result.toString());
+        setCalculation('');
+      } catch (error) {
+        setError('Invalid calculation');
+      }
   };
 
   const handleClearClick = () => {
-    setDisplayValue('0');
-    setFirstOperand(null);
-    setOperator(null);
-    setWaitingForSecondOperand(false);
+    setDisplayValue('');
+    setCalculation('');
+    setError('');
   };
 
  const content = (
     <> 
-        <div className="calculator">
-            <div className="display">{displayValue}</div>
-            <div className="keypad">
-                <button onClick={() => handleDigitClick('7')}>7</button>
-                <button onClick={() => handleDigitClick('8')}>8</button>
-                <button onClick={() => handleDigitClick('9')}>9</button>
-                <button onClick={() => handleOperatorClick('+')}>+</button>
-                <br/>
-                <button onClick={() => handleDigitClick('4')}>4</button>
-                <button onClick={() => handleDigitClick('5')}>5</button>
-                <button onClick={() => handleDigitClick('6')}>6</button>
-                <button onClick={() => handleOperatorClick('-')}>-</button>
-                <br/>
-                <button onClick={() => handleDigitClick('1')}>1</button>
-                <button onClick={() => handleDigitClick('2')}>2</button>
-                <button onClick={() => handleDigitClick('3')}>3</button>
-                <button onClick={() => handleOperatorClick('*')}>*</button>
-                <br/>
-                <button onClick={() => handleDigitClick('0')}>0</button>
-                <button onClick={() => handleOperatorClick('.')}>.</button>
-                <button onClick={calculateResult}>=</button>
-                <button onClick={() => handleOperatorClick('/')}>/</button>
-                <button onClick={handleClearClick}>C</button>
-            </div>
+    <div className="calculator">
+        <input type="text" value={displayValue} readOnly className="display" />
+        <div className="keypad">
+            <button onClick={() => handleDigitClick('7')}>7</button>
+            <button onClick={() => handleDigitClick('8')}>8</button>
+            <button onClick={() => handleDigitClick('9')}>9</button>
+            <button onClick={() => handleOperatorClick('+')}>+</button>
+            <br/>
+            <button onClick={() => handleDigitClick('4')}>4</button>
+            <button onClick={() => handleDigitClick('5')}>5</button>
+            <button onClick={() => handleDigitClick('6')}>6</button>
+            <button onClick={() => handleOperatorClick('-')}>-</button>
+            <br/>
+            <button onClick={() => handleDigitClick('1')}>1</button>
+            <button onClick={() => handleDigitClick('2')}>2</button>
+            <button onClick={() => handleDigitClick('3')}>3</button>
+            <button onClick={() => handleOperatorClick('*')}>*</button>
+            <br/>
+            <button onClick={() => handleDigitClick('0')}>0</button>
+            <button onClick={() => handleOperatorClick('.')}>.</button>
+            <button onClick={calculateResult}>=</button>
+            <button onClick={() => handleOperatorClick('/')}>/</button>
+            <button onClick={handleClearClick}>C</button>
+        </div>
+        {error && <div className="error">{error}</div>}
         </div>
     </>
     )
+
     return content
    
 }
