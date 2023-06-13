@@ -12,6 +12,10 @@ const ProjectHome = () => {
                 <Link to ="/projects/snowboardResortsApp">
                     <button>Snowboard Resorts App</button>
                 </Link>
+                <br/>
+                <Link to ="/projects/calculatorApp">
+                    <button>Calculator App</button>
+                </Link>
             </body>
         </>
 
