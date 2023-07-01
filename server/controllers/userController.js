@@ -2,6 +2,10 @@ const User = require('../models/Users')
 const Note = require('../models/Note')
 const asyncHandler = require('express-async-handler')
 const bcrypt = require('bcrypt')
+/**
+ * This is where we define CRUD Operations
+ */
+
 
 // @desc Get All users
 // @route GET /users
