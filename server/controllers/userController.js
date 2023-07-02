@@ -1,5 +1,4 @@
 const User = require('../models/Users')
-const Note = require('../models/Note')
 const asyncHandler = require('express-async-handler')
 const bcrypt = require('bcrypt')
 /**
@@ -105,11 +104,11 @@ const deleteUser = asyncHandler(async(req, res) => {
     }
     
     //check if user has notes
-    const note = await Note.findOne({ user: id }).lean().exec()
+    // const note = await Note.findOne({ user: id }).lean().exec()
 
-    if(note){
-        return res.status(400).json({ message: `User has assigned notes`})
-    }
+    // if(note){
+    //     return res.status(400).json({ message: `User has assigned notes`})
+    // }
 
     const user = await User.findById(id).exec()
 
