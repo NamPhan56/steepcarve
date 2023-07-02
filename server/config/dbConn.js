@@ -1,5 +1,5 @@
-//make sure you setup your config.env file and do not store that file in github.
-
+//make sure you setup your .env file in the same directory as your server.js and do not store that file in github.
+//make sure your connection string does not start nor end with quotes.
 const mongoose = require('mongoose');
 require('dotenv').config();
 
