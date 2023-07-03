@@ -42,9 +42,9 @@ const CalculatorHarness = () => {
 
  const content = (
     <> 
-    {/* <div className="calculator">
-      <input type="text" value={displayValue} readOnly className="display" />
-      <div class="keypad">
+    {/* <div classNameName="calculator">
+      <input type="text" value={displayValue} readOnly classNameName="display" />
+      <div className="keypad">
           <button onClick={() => handleDigitClick('7')}>7</button>
           <button onClick={() => handleDigitClick('8')}>8</button>
           <button onClick={() => handleDigitClick('9')}>9</button>
@@ -66,7 +66,7 @@ const CalculatorHarness = () => {
           <button onClick={() => handleOperatorClick('/')}>/</button>
           <button onClick={handleClearClick}>C</button>
       </div>
-      {error && <div className="error">{error}</div>}
+      {error && <div classNameName="error">{error}</div>}
     </div> */}
 
     <div id="mycalc">

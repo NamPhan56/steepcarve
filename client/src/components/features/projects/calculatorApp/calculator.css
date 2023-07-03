@@ -1,14 +1,16 @@
-.buttons {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-  }
 
+#displayfields {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 200px;
+}
 .calculatorApp {
   border: 1px solid black;
   padding: 10px;
   margin: 10px;
-  width: 200px;
+  width: 250px;
 }
 #mycalc {
   display: flex;
@@ -18,4 +20,11 @@
 .keypadbuttons {
   width: 30px;
   margin-right: 5px;
+}
+
+#keypad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
