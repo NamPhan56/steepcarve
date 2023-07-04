@@ -11,7 +11,7 @@ const Keypad = (props) => {
     }
 
     const content = (
-        <>
+        <div className="page">
             <div className="row">
                 {/* Row 1 */}
                 <button className="keypadbutton" label="("  onClick={buttononClickHandler}>(</button>
@@ -47,7 +47,7 @@ const Keypad = (props) => {
                 <button className="keypadbutton" label="."  onClick={buttononClickHandler}>.</button>
                 <button className="keypadbutton" label="="  onClick={buttononClickHandler}>=</button>
             </div>
-        </>
+        </div>
     )
     return content  
 }

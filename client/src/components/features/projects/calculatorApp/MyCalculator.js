@@ -52,9 +52,9 @@ const MyCalculator = () => {
         }
     }
     const content = (
-        <>
+        <div className="page">
             <div className="calculatorApp">
-                <h1>My Calculator</h1>
+                <header className="header">My Calculator</header>
                 <div id="displayfields">
                     <input type="text" name="displayField" placeholder="result" readOnly value={resultsValue ?? ''}></input>
                     <br/>
@@ -65,7 +65,7 @@ const MyCalculator = () => {
                     <Keys sendDataToParent={handleDataFromChild}/>
                 </div>
             </div>
-        </>
+        </div>
     )
     return content
    
