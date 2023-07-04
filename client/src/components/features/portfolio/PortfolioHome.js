@@ -4,8 +4,8 @@ import './portfolioHome.css';
 const PortfolioHome = () => {
     
     const content = (
-        <>
-            <header>My Portfolio</header>
+        <div className="page">
+            <header className="header">My Portfolio</header>
             {/* Header */}
             <p>
                 Nam Phan<br/>
@@ -20,7 +20,7 @@ const PortfolioHome = () => {
             </p>
 
             {/* Skills */}
-            <header>Skills</header>
+            <header className="header">Skills</header>
             <p>
                 I am a Full Stack Developer with skills in:
                 <ul>
@@ -42,31 +42,31 @@ const PortfolioHome = () => {
             </p>
 
             {/* Projects */}
-            <header>Projects</header>
+            <header className="header">Projects</header>
             <p>
                 Feel free to check out my <Link to="/projects">projects!</Link>
             </p>
 
             {/* Experience */}
-            <header>Experience</header>
+            <header className="header">Experience</header>
             <p>
                 Software Engineer for Revature
             </p>
 
             {/* Education */}
-            <header>Education</header>
+            <header className="header">Education</header>
             <p>
                 BS in Computer Science<br/>
                 Universtiy of Massachusetts Amherst
             </p>
 
             {/* Contact */}
-            <header>Contact</header>
+            <header className="header">Contact</header>
             <p>
                 Contact Email
             </p>
 
-        </>
+        </div>
     )
     return content
    

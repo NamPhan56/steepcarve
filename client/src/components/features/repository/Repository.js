@@ -4,13 +4,13 @@ import './repository.css';
 
 const Repository = () => {
     const content = (
-        <>
-            <header><h1>Welcome to the Repository</h1></header>
+        <div className="page">
+            <header className="header">Welcome to the Repository</header>
 
-            <Link to ="/repository/webdevelopment">
+            <Link className="Link" to ="/repository/webdevelopment">
                 <button>Web Development</button>
             </Link>
-        </>
+        </div >
     )
     return content
 }

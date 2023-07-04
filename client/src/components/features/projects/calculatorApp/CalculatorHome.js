@@ -5,13 +5,13 @@ import CalculatorHarness from './CalculatorHarness';
 
 const CalculatorHome = () => {
     const content = (
-        <>
-            <header><h1>Calculator App</h1></header>
+        <div className="page">
+            <header className="header">Calculator App</header>
             <p>This is the calculator app.</p>
             <hr/>
 
             <CalculatorHarness/>
-        </>
+        </div>
     )
     return content
 }
