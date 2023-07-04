@@ -3,29 +3,7 @@ import React, { useState } from 'react';
 import '../projects.css';
 import './calculator.css';
 
-function equalHandler(){
-    let evt = new CustomEvent('sendequal', {});
-    this.dispatchEvent(evt);
-}
-
-function clearHandler(){
-    let evt = new CustomEvent('sendclear', {});
-    this.dispatchEvent(evt);
-}
-
-function buttononClickHandler(event){
-    let value = event.target.label;
-
-    let evt = new CustomEvent('sendbuttonvalue',{"detail": value});
-    this.dispatchEvent(evt);
-    //console.log(value);
-}
-
 const Keypad = (props) => {
-    
-    const [displayValue, setDisplayValue] = useState('');
-    const [calculation, setCalculation] = useState('');
-    const [error, setError] = useState('');
 
     function buttononClickHandler(event){
         const attr = event.target.getAttribute('label');
@@ -38,7 +16,7 @@ const Keypad = (props) => {
                 {/* Row 1 */}
                 <button className="keypadbutton" label="("  onClick={buttononClickHandler}>(</button>
                 <button className="keypadbutton" label=")"  onClick={buttononClickHandler}>)</button>
-                <button className="keypadbutton" label="C"  onClick={clearHandler}>C</button>
+                <button className="keypadbutton" label="C"  onClick={buttononClickHandler}>C</button>
                 <button className="keypadbutton" label="/"  onClick={buttononClickHandler}>/</button>
             </div>
             <div className="row">
@@ -67,7 +45,7 @@ const Keypad = (props) => {
                 <button className="keypadbutton" label="blank"  onClick={buttononClickHandler}>    </button>
                 <button className="keypadbutton" label="0"  onClick={buttononClickHandler}>0</button>
                 <button className="keypadbutton" label="."  onClick={buttononClickHandler}>.</button>
-                <button className="keypadbutton" label="="  onClick={equalHandler}>=</button>
+                <button className="keypadbutton" label="="  onClick={buttononClickHandler}>=</button>
             </div>
         </>
     )
