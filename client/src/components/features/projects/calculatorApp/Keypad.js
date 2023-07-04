@@ -27,15 +27,9 @@ const Keypad = (props) => {
     const [calculation, setCalculation] = useState('');
     const [error, setError] = useState('');
 
-    function buttononClickHandler(){
-        
-        const button = document.querySelector('.keypadbutton');
-        const attr = button.getAttribute('data-custom-attr');
-
+    function buttononClickHandler(event){
+        const attr = event.target.getAttribute('label');
         props.sendDataToParent(attr);
-        //let evt = new CustomEvent('sendbuttonvalue',{"detail": value});
-        //this.dispatchEvent(evt);
-        //console.log(value);
     }
 
     const content = (
