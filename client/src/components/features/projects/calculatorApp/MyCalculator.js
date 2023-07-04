@@ -56,7 +56,7 @@ const MyCalculator = () => {
             <div className="calculatorApp">
                 <h1>My Calculator</h1>
                 <div id="displayfields">
-                    <input type="text" name="displayField" placeholder="result" readOnly value={resultsValue}></input>
+                    <input type="text" name="displayField" placeholder="result" readOnly value={resultsValue ?? ''}></input>
                     <br/>
                     <input type="text" name="inputField" onKeyDown={handleKeyPress} onInput={handleInputChange} autoComplete="off" placeholder="input" value={displayValue ?? ''}></input>
                 </div>
