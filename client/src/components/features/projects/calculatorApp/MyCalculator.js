@@ -8,7 +8,6 @@ const MyCalculator = () => {
     
     const [displayValue, setDisplayValue] = useState('');
     const [resultsValue, setResultsValue] = useState('');
-    const [error, setError] = useState('');
     
 
     /*
@@ -22,15 +21,15 @@ const MyCalculator = () => {
             equalHandler();
         }
         else{
-            setDisplayValue(displayValue + data);
             // appends to the current input string
+            setDisplayValue(displayValue + data);
         }
     }
 
     // handles the clear button
     const clearHandler = () => {
-        setDisplayValue("");
-        setResultsValue("");
+        setDisplayValue('');
+        setResultsValue('');
     }
 
     //handles the equals button

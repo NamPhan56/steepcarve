@@ -49,8 +49,7 @@ const Keypad = (props) => {
             </div>
         </>
     )
-    return content
-   
+    return content  
 }
 
 export default Keypad;

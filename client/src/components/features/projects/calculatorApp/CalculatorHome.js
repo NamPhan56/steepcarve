@@ -4,7 +4,6 @@ import './calculator.css';
 import CalculatorHarness from './CalculatorHarness';
 
 const CalculatorHome = () => {
-    
     const content = (
         <>
             <header><h1>Calculator App</h1></header>
@@ -12,14 +11,9 @@ const CalculatorHome = () => {
             <hr/>
 
             <CalculatorHarness/>
-
-
-
-
         </>
     )
     return content
-   
 }
 
 export default CalculatorHome
