@@ -10,6 +10,7 @@ const MyCalculator = () => {
     const [resultsValue, setResultsValue] = useState('');
     const [error, setError] = useState('');
     
+
     /*
         child(Keypad component) to parent(MyCalculator component) callback function
     */
@@ -21,9 +22,7 @@ const MyCalculator = () => {
             equalHandler();
         }
         else{
-            console.log("Pressed: " + data);
             setDisplayValue(displayValue + data);
-            console.log("displayValue: " + displayValue);
             // appends to the current input string
         }
     }
@@ -31,25 +30,28 @@ const MyCalculator = () => {
     // handles the clear button
     const clearHandler = () => {
         setDisplayValue("");
-        console.log("cleared, displayValue: " + displayValue);
+        setResultsValue("");
     }
 
     //handles the equals button
     const equalHandler = () => {
         try{
             setResultsValue(eval(displayValue));
-
         }
         catch(SyntaxError){
-            this.result = "There are errors in your formula.";
+            setResultsValue("There are errors in your formula.");
         }
     }
 
     const handleInputChange = (e) => {
         setDisplayValue(e.target.value)
-        //console.log("displayValue: " + displayValue);
     }
 
+    const handleKeyPress = (e) => {
+        if(e.key === "Enter"){
+            equalHandler();
+        }
+    }
     const content = (
         <>
             <div className="calculatorApp">
@@ -57,7 +59,7 @@ const MyCalculator = () => {
                 <div id="displayfields">
                     <input type="text" name="displayField" placeholder="result" readOnly value={resultsValue}></input>
                     <br/>
-                    <input type="text" name="inputField" onChange={handleInputChange} autoComplete="off" placeholder="input"></input>
+                    <input type="text" name="inputField" onKeyDown={handleKeyPress} onInput={handleInputChange} autoComplete="off" placeholder="input" value={displayValue ?? ''}></input>
                 </div>
                 <hr/>
                 <div id="keypad">
