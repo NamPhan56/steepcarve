@@ -1,6 +1,6 @@
 import styles from './home.css'
 
-import classNames from 'classnames';
+// import classNames from 'classnames';
 const Home = () => {
         const content = (
             <div>

@@ -4,16 +4,17 @@ import './App.css';
 
 import Home from './components/Home'
 
-import PortfolioHome from './components/features/portfolio/PortfolioHome'
+import PortfolioHome from './components/features/portfolio/PortfolioHome';
 
-import ProjectHome from './components/features/projects/ProjectHome'
-import SnowboardResortsHome from './components/features/projects/snowboardResortsApp/SnowboardResortsHome'
+import ProjectHome from './components/features/projects/ProjectHome';
+import SnowboardResortsHome from './components/features/projects/snowboardResortsApp/SnowboardResortsHome';
+import CalculatorHome from './components/features/projects/calculatorApp/CalculatorHome';
 
-import Repository from './components/features/repository/Repository'
-import WebDevelopment from './components/features/repository/webdevelopment/WebDevelopment'
-import MERNStack from './components/features/repository/webdevelopment/mernstack/MERNStack'
-import MENStack from './components/features/repository/webdevelopment/menstack/MENStack'
-import ReactMarkdown from './components/features/repository/webdevelopment/reactmarkdown/ReactMarkdown'
+import Repository from './components/features/repository/Repository';
+import WebDevelopment from './components/features/repository/webdevelopment/WebDevelopment';
+import MERNStack from './components/features/repository/webdevelopment/mernstack/MERNStack';
+import MENStack from './components/features/repository/webdevelopment/menstack/MENStack';
+import ReactMarkdown from './components/features/repository/webdevelopment/reactmarkdown/ReactMarkdown';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route path="/portfolio" element={<PortfolioHome />} />
         <Route path="/projects" element={<ProjectHome />} />
           <Route path="/projects/snowboardResortsApp" element={<SnowboardResortsHome />} />
+          <Route path="/projects/calculatorApp" element={<CalculatorHome />} />
         <Route path="/repository" element={<Repository />} />
           <Route path="/repository/webdevelopment" element={<WebDevelopment />} />
             <Route path="/repository/webdevelopment/mernstack" element={<MERNStack />} />
