@@ -12,6 +12,10 @@ const ProjectHome = () => {
             <Link to ="/projects/calculatorApp" className="Link">
                 <button>Calculator App</button>
             </Link>
+            <Link to ="/projects/blogapp" className="Link">
+                <button>Blog App</button>
+            </Link>
+
 
         </div>
 

@@ -9,6 +9,7 @@ import PortfolioHome from './components/features/portfolio/PortfolioHome';
 import ProjectHome from './components/features/projects/ProjectHome';
 import SnowboardResortsHome from './components/features/projects/snowboardResortsApp/SnowboardResortsHome';
 import CalculatorHome from './components/features/projects/calculatorApp/CalculatorHome';
+import BlogHome from './components/features/projects/blogApp/BlogHome';
 
 import Repository from './components/features/repository/Repository';
 import WebDevelopment from './components/features/repository/webdevelopment/WebDevelopment';
@@ -42,6 +43,7 @@ function App() {
         <Route path="/projects" element={<ProjectHome />} />
           <Route path="/projects/snowboardResortsApp" element={<SnowboardResortsHome />} />
           <Route path="/projects/calculatorApp" element={<CalculatorHome />} />
+          <Route path="/projects/blogapp" element={<BlogHome />} />
         <Route path="/repository" element={<Repository />} />
           <Route path="/repository/webdevelopment" element={<WebDevelopment />} />
             <Route path="/repository/webdevelopment/mernstack" element={<MERNStack />} />
