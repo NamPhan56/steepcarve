@@ -7,8 +7,14 @@ import './blog.css';
 const BlogApp = () => {
     const [displayValue, setDisplayValue] = useState('');
 
-    function handleInputChange(){
-        
+    const handleInputChange = (e) =>{
+        setDisplayValue(e.target.value)
+    }
+
+    //submit post to be added to the wall
+    const handleSubmit = () => {
+        setDisplayValue('');
+        console.log(displayValue);
     }
 
     const content = (
@@ -21,11 +27,10 @@ const BlogApp = () => {
             </div>
             <br/>
             <form className="input-form">
-                <textarea className="input-box" onInput={handleInputChange} autocomplete="off" placeholder="type your post here" value={displayValue ?? ''} type="text" />
+                <textarea className="input-box" onInput={handleInputChange} autoComplete="off" placeholder="type your post here" value={displayValue ?? ''} type="text" />
                 <br/>
-                <button className="blog-submit-btn">Submit</button>
             </form>
-
+            <button className="blog-submit-btn" onClick={handleSubmit}>Submit</button>
 
 
         </div>
