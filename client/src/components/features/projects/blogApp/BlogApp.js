@@ -30,7 +30,7 @@ const BlogApp = () => {
                 <textarea className="input-box" onInput={handleInputChange} autoComplete="off" placeholder="type your post here" value={displayValue ?? ''} type="text" />
                 <br/>
             </form>
-            <button className="blog-submit-btn" onClick={handleSubmit}>Submit</button>
+            <button className="blog-submit-btn" onClick={handleSubmit}>Post</button>
 
 
         </div>
