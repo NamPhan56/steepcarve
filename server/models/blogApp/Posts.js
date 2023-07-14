@@ -6,30 +6,30 @@ const AutoIncrement = require('mongoose-sequence')(mongoose) //psses mongoose in
 
 const postSchema = new mongoose.Schema({
     //who wrote the post
-    // user: {
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     required: true,
-    //     ref: 'User'
-    // },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: false,
+        ref: 'User'
+    },
     
     //Text of the post
     message: {
         type: String,
         required: true
-    }
+    },
 
-    //date and time of the post
-    // createdAt: {
-    //     type: Date,
-    //     default: Date.now,
-    //     required: true
-    // }
+    // date and time of the post
+    createdAt: {
+        type: Date,
+        default: Date.now,
+        required: true
+    }
 });
 
-noteSchema.plugin(AutoIncrement, {
-    inc_field: 'ticket',
-    id: 'ticketNums',
-    start_seq:500
-})
+// noteSchema.plugin(AutoIncrement, {
+//     inc_field: 'ticket',
+//     id: 'ticketNums',
+//     start_seq:500
+// })
 
 module.exports = mongoose.model('Post', postSchema)
