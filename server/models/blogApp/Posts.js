@@ -4,6 +4,8 @@ const AutoIncrement = require('mongoose-sequence')(mongoose) //psses mongoose in
 
 //data model
 
+const blogDB = mongoose.connection.useDb('blogdb');
+
 const postSchema = new mongoose.Schema({
     //who wrote the post
     user: {
@@ -21,7 +23,7 @@ const postSchema = new mongoose.Schema({
     // date and time of the post
     createdAt: {
         type: Date,
-        default: Date.now,
+        default: new Date(Date.now),
         required: true
     }
 });
@@ -32,4 +34,4 @@ const postSchema = new mongoose.Schema({
 //     start_seq:500
 // })
 
-module.exports = mongoose.model('Post', postSchema)
+module.exports = blogDB.model('Post', postSchema)

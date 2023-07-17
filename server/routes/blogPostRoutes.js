@@ -2,11 +2,10 @@ const express = require('express')
 const router = express.Router()
 const postsController = require('../controllers/blogApp/postsController')
 
-router.route('/')
-    // .get(postsController.getAllUsers)
+router.route('/getFivePosts')
     .get(postsController.getFivePosts)
+    
+router.route('/createPost')
     .post(postsController.createPost)
-    // .patch(postsController.updateUser)
-    //.delete(postsController.deleteUser)
 
 module.exports = router

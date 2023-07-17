@@ -15,6 +15,8 @@ const connectDB = require('./config/dbConn')
 const mongoose = require('mongoose')
 const { logEvents } = require('./middleware/logger')
 
+
+
 const PORT = process.env.POR || 4000
 
 console.log(process.env.NODE_ENV)
@@ -32,7 +34,12 @@ app.use(cookieParser())
 app.use('/', express.static(path.join(__dirname, '/public')))
 
 app.use('/', require('./routes/root'))
-app.use('/blogApp', require('./routes/blogPostRoutes'))
+
+//issues here with routing
+app.use('/blogApp', require('./routes/blogPostRoutes'));
+
+//const blogAppController = require('./controllers/blogApp/postsController');
+//app.get('/blogApp/getFivePosts', blogAppController.getFivePosts);
 
 app.all('*',(req,res) => {
     //responds with a 404 status
