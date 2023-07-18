@@ -21,7 +21,7 @@ const PortfolioHome = () => {
 
             {/* Skills */}
             <header className="header">Skills</header>
-            <p>
+            <div>
                 I am a Full Stack Developer with skills in:
                 <ul>
                     <li>HTML</li>
@@ -39,7 +39,7 @@ const PortfolioHome = () => {
                     <li>Salesforce's Apex</li>
                     <li>Salesforce's SOQL</li>
                 </ul>
-            </p>
+            </div>
 
             {/* Projects */}
             <header className="header">Projects</header>

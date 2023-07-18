@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Post from './Post.js';
 
@@ -7,7 +7,6 @@ import './blog.css';
 
 const BlogApp = () => {
     const [displayValue, setDisplayValue] = useState('');
-
     const [posts, setPosts] = useState([]);
 
     const handleInputChange = (e) =>{
@@ -16,14 +15,12 @@ const BlogApp = () => {
 
     //submit post to be added to the wall
     const handleSubmit = () => {
-
         const postOBJ = {
             "message": displayValue,
         };
 
         fetch('http://localhost:4000/blogApp/createPost', {
             method: 'POST',
-            mode: "cors",
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -42,12 +39,7 @@ const BlogApp = () => {
         .catch((err) => {
             console.error('Error sending data:', err);
         })
-
         setDisplayValue('');
-
-
-        //console.log(displayValue);
-        
     }
 
     /**
@@ -93,6 +85,11 @@ const BlogApp = () => {
             <button className="blog-submit-btn" onClick={handleSubmit}>Post</button>
         </div>
     )
+
+    //calls updateWall() on page load, and [] causes it to only be called once. Using Strict mode, components will render twice in dev, and not in prod
+    useEffect(()=> {
+        updateWall()
+    }, []);
 
     return content;
 }
