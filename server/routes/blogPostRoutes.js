@@ -8,4 +8,7 @@ router.route('/getFivePosts')
 router.route('/createPost')
     .post(postsController.createPost)
 
+router.route('/deleteAllPosts')
+    .delete(postsController.deleteAllPosts)
+
 module.exports = router

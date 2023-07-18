@@ -9,9 +9,9 @@ const blogDB = mongoose.connection.useDb('blogdb');
 const postSchema = new mongoose.Schema({
     //who wrote the post
     user: {
-        type: mongoose.Schema.Types.ObjectId,
-        required: false,
-        ref: 'User'
+        type: String,
+        required: true,
+        default: "Anonymous",
     },
     
     //Text of the post
@@ -23,7 +23,7 @@ const postSchema = new mongoose.Schema({
     // date and time of the post
     createdAt: {
         type: Date,
-        default: new Date(Date.now),
+        default: Date.now,
         required: true
     }
 });

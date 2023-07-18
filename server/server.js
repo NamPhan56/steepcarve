@@ -33,13 +33,11 @@ app.use(cookieParser())
 
 app.use('/', express.static(path.join(__dirname, '/public')))
 
+//Routing for main app
 app.use('/', require('./routes/root'))
 
-//issues here with routing
+//Routing for Blog App
 app.use('/blogApp', require('./routes/blogPostRoutes'));
-
-//const blogAppController = require('./controllers/blogApp/postsController');
-//app.get('/blogApp/getFivePosts', blogAppController.getFivePosts);
 
 app.all('*',(req,res) => {
     //responds with a 404 status
