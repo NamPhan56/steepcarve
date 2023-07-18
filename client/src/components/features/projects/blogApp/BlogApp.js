@@ -36,6 +36,8 @@ const BlogApp = () => {
             return res.json();
         }).then((data) => {
             console.log('Data sent successfully:', data);
+            setDisplayValue('');
+            updateWall();
         })
         .catch((err) => {
             console.error('Error sending data:', err);
@@ -43,7 +45,7 @@ const BlogApp = () => {
 
         setDisplayValue('');
 
-        updateWall();
+
         //console.log(displayValue);
         
     }
@@ -65,10 +67,8 @@ const BlogApp = () => {
             console.log('Data received successfully:', data);
             let newPosts = [];
             for(const key in data){
-                console.log("key: " + data[key].message);
                 newPosts.push(Post(data[key]));
             }
-            console.log(newPosts);
             setPosts(newPosts);
         })
         .catch((err) => {
@@ -81,7 +81,7 @@ const BlogApp = () => {
             <div className="blog-wall">
                 <ul>
                     {posts.map((post, index) => (
-                    <li key={index}>{post}</li>
+                    <div key={index}>{post}</div>
                     ))}
                 </ul>
             </div>
