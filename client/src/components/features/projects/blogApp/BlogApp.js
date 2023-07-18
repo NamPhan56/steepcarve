@@ -23,6 +23,7 @@ const BlogApp = () => {
 
         fetch('http://localhost:4000/blogApp/createPost', {
             method: 'POST',
+            mode: "cors",
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -32,7 +33,7 @@ const BlogApp = () => {
             if(!res.ok){
                 throw new Error('Network response was not ok.');
             }
-            return res.json;
+            return res.json();
         }).then((data) => {
             console.log('Data sent successfully:', data);
         })
@@ -53,24 +54,21 @@ const BlogApp = () => {
     const updateWall = () => {
 
         fetch('http://localhost:4000/blogApp/getFivePosts', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
+            method: 'GET'
         })
-        .then ((res) => {
-            console.log(res);
+        .then (res => {
             if(!res.ok){
                 throw new Error('Network response was not ok.');
             }
-            return res.json;
+            return res.json();
         }).then((data) => {
-            console.log('Data received successfully:', data.post);
+            console.log('Data received successfully:', data);
             let newPosts = [];
-            let jsonData = JSON.stringify(data.post); 
-            for(const key in jsonData){
-                newPosts.push(new Post(key));
+            for(const key in data){
+                console.log("key: " + data[key].message);
+                newPosts.push(Post(data[key]));
             }
+            console.log(newPosts);
             setPosts(newPosts);
         })
         .catch((err) => {

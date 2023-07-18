@@ -2,6 +2,7 @@
 
 const allowedOrigins = [
     'http://localhost:3000',
+    'http://localhost:4000',
     'https://www.steepcarve.net',
     'https://steepcarve.net'
 

@@ -37,11 +37,9 @@ const getFivePosts = asyncHandler(async(req,res) => {
         const post = await Posts.find().sort({ createdAt: -1 }).limit(5);
 
         if(post){
-            res.status(200).json({ message: `Found 5 recent posts`,
-            post
-        })
+            res.status(200).json(post)
         } else {
-            res.status(400).json({ message: `Not able to find 5 recent pots`})
+            res.status(400)
         }
         // const latestDocuments = await Posts.find().sort({ createdAt: -1 }).limit(5);
         // res.json(latestDocuments);

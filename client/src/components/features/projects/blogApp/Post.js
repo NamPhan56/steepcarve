@@ -10,7 +10,6 @@ const Post = (data) => {
         <div className="page">
             <div className="blog-post">
                 <p>
-                    This is a blog post
                     {data.message}
                 </p>
             </div>
