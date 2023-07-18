@@ -1,6 +1,4 @@
 
-import React, { useState } from 'react';
-
 import '../projects.css';
 import './blog.css';
 
