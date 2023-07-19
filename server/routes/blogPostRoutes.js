@@ -11,4 +11,7 @@ router.route('/createPost')
 router.route('/deleteAllPosts')
     .delete(postsController.deleteAllPosts)
 
+// router.route('/deleteOldest')
+//     .delete(postsController.deleteOldest)
+
 module.exports = router

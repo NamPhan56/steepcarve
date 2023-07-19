@@ -87,7 +87,7 @@ const BlogApp = () => {
     )
 
     //calls updateWall() on page load, and [] causes it to only be called once. Using Strict mode, components will render twice in dev, and not in prod
-    useEffect(()=> {
+    useEffect(() => {
         updateWall()
     }, []);
 

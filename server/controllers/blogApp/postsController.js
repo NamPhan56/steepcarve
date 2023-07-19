@@ -12,7 +12,7 @@ const asyncHandler = require('express-async-handler');
  */
 
 const createPost = asyncHandler(async(req,res) => {
-        console.log("Calling CreatePost")
+        //console.log("Calling CreatePost")
         const message = req.body.message;
 
         const postObject = {
@@ -25,6 +25,7 @@ const createPost = asyncHandler(async(req,res) => {
         } else {
             res.status(400).json({ message: `Invalid post data received`})
         }
+        deleteOldest();
 })
 
 
@@ -33,7 +34,7 @@ const createPost = asyncHandler(async(req,res) => {
  */
 
 const getFivePosts = asyncHandler(async(req,res) => {
-        console.log("calling getFivePosts")
+        //console.log("calling getFivePosts")
         const post = await Posts.find().sort({ createdAt: -1 }).limit(5);
 
         if(post){
@@ -41,12 +42,6 @@ const getFivePosts = asyncHandler(async(req,res) => {
         } else {
             res.status(400)
         }
-        // const latestDocuments = await Posts.find().sort({ createdAt: -1 }).limit(5);
-        // res.json(latestDocuments);
-        // console.log(latestDocuments);
-
-        //console.error('Error retrieving latest documents:', error);
-    
 })
 
 /**
@@ -54,16 +49,12 @@ const getFivePosts = asyncHandler(async(req,res) => {
  * not used
  */
 
-//Update Posts
-//not used
-
 
 /**
- * delete operation
- * deletes all posts after a certain time period
+ * deletes all posts operation
  */
 const deleteAllPosts = asyncHandler(async(req,res) => {
-        console.log("Calling deleteAllPosts")
+        //console.log("Calling deleteAllPosts")
 
         const isDeleted = await Posts.deleteMany()
 
@@ -74,8 +65,28 @@ const deleteAllPosts = asyncHandler(async(req,res) => {
         }
 })
 
+/**
+ * Deletes all posts except the 5 required to display                   
+ */
+const deleteOldest = asyncHandler(async(req,res) => {
+    //console.log("Calling deleteOldest")
+    
+    const postsToDelete = 30;
+    const totalDocs = await Posts.countDocuments({});
+
+    if((totalDocs-5) > postsToDelete){
+        //console.log("there are at least 30 documents, deleting")
+        const oldDocs = await Posts.find().sort({ createdAt: 1 }).limit(postsToDelete);
+
+        // Delete the oldest documents
+        const oldestDocumentIds = oldDocs.map((doc) => doc._id);
+        await Posts.deleteMany({ _id: { $in: oldestDocumentIds } });
+
+    }
+})
+
 module.exports = {
     getFivePosts,
     createPost,
-    deleteAllPosts
-}
+    deleteAllPosts,
+ }
